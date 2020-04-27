@@ -44,7 +44,7 @@
   margin-left: 15%;
 }
 
-#banner .banner .banner-text h2{
+#banner .banner .banner-text h1{
   margin-bottom: 45px;
   font-size: 42px;
 }
@@ -97,7 +97,7 @@
   justify-content: center;
 }
 
-#about .about-area .about-title h2{
+#about .about-area .about-title h1{
   width: 90%;
   font-size: 40px;
   text-align: left;
@@ -164,15 +164,8 @@
   text-align:center;
 }
 
-#feature .feature-area h2{
+#feature .feature-area h1{
   font-size: 40px;
-}
-
-#feature .feature-area hr{
-  width: 15%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border-top: 4px solid #ae3e3e;
 }
 
 #feature .feature-area .feature-img{
