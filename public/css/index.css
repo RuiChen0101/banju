@@ -1,3 +1,8 @@
+#header{
+  opacity: 0;
+}
+
+/* banner section */
 #banner{
   width: 100%;
   background:url(../image/index/banner_background.png);
@@ -64,4 +69,157 @@
   right: 0;
   margin-top: 30%;
   margin-right: 8%;
+}
+
+/* about-us section */
+#about{
+  width: 100%;
+  height: 962px;
+  background:url(../image/index/section1.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:  center;
+}
+
+#about .about-area{
+  width: 100%;
+  padding: 80px 25px;
+  background: linear-gradient(180deg, rgba(89,22,22,0.65) 0%, rgba(174,62,62,0.65) 100%);
+}
+
+#about .about-area .about-title{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#about .about-area .about-title h2{
+  width: 90%;
+  font-size: 40px;
+  text-align: left;
+  color: #ffffff;
+}
+
+#about .about-area .about-mid{
+  margin: 40px 0px;
+}
+
+#about .about-area .about-desc p{
+  color: #ffffff;
+  margin: 3px 0px;
+  text-align: left;
+}
+
+#about .about-area .about-logo img{
+  width: 75%;
+  height: auto:
+}
+
+#about .about-area .about-bottom{
+  margin-left: 0px;
+}
+
+#about .about-area .about-btn{
+  padding: 5px;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  border-radius: 5px;
+}
+
+#about .about-background-deco{
+  right: 0px;
+  margin-right: 19%;
+  margin-top: -2%;
+  position: absolute;
+  z-index: 0;
+}
+
+#about .about-background-deco img{
+  width: 635px;
+  height: auto;
+}
+
+#about .about-dot1{
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  margin-top: 12%;
+  margin-right: 22%;
+}
+
+/* detail section */
+#feature{
+  width: 100%;
+  padding: 100px 0px;
+  background:url(../image/line_background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#feature .feature-area{
+  text-align:center;
+}
+
+#feature .feature-area h2{
+  font-size: 40px;
+}
+
+#feature .feature-area hr{
+  width: 15%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-top: 4px solid #ae3e3e;
+}
+
+#feature .feature-area .feature-img{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#feature .feature-area .feature-img img{
+  width: 100%;
+  height: auto;
+}
+
+#feature .feature-area .feature-img-beckground{
+  position: absolute;
+  z-index: 0;
+
+}
+
+#feature .feature-area .feature-img-beckground img{
+  width: 445px;
+  height: auto;
+  margin-top: 30%;
+}
+
+#feature .single-feature{
+  margin: 50px 0px;
+}
+
+#feature .single-feature .feature-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#feature .single-feature .feature-icon img{
+  width: auto;
+  height: 60%;
+}
+
+#feature .single-feature .feature-text h4{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#feature .single-feature .feature-text p{
+  font-size: 14px;
+  margin: 0px;
 }
