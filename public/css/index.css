@@ -1,0 +1,67 @@
+#banner{
+  width: 100%;
+  background:url(../image/index/banner_background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#banner .header{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:  center;
+}
+
+#banner .header .header-logo{
+  margin: 47px;
+}
+
+#banner .banner{
+  margin-top: 46px;
+}
+
+#banner .banner .banner-graphic{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:  center;
+}
+
+#banner .banner .banner-graphic img{
+  height auto;
+  width: 73%;
+}
+
+#banner .banner .banner-text{
+  position: absolute;
+  z-index: 20;
+  margin-top: 3%;
+  margin-left: 15%;
+}
+
+#banner .banner .banner-text h2{
+  margin-bottom: 45px;
+  font-size: 42px;
+}
+
+#banner .banner .banner-text .search-link{
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #ae3e3e;
+}
+
+#banner .banner .banner-dot1{
+  position: absolute;
+  z-index: 10;
+  margin-left: 10%;
+}
+
+#banner .banner .banner-dot2{
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  margin-top: 30%;
+  margin-right: 8%;
+}
