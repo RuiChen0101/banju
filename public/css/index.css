@@ -21,10 +21,6 @@
   margin: 47px;
 }
 
-#banner .banner {
-  margin-top: 46px;
-}
-
 #banner .banner .banner-graphic {
   display: flex;
   text-align: center;
@@ -210,9 +206,13 @@
 #feature .single-feature .feature-text h4 {
   font-size: 25px;
   margin-bottom: 10px;
+  text-align: left;
+  color: #591616;
 }
 
 #feature .single-feature .feature-text p {
   font-size: 14px;
   margin: 0px;
+  color: #707070;
+  text-align: left;
 }
