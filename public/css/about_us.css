@@ -13,6 +13,7 @@
 #banner h1{
   margin-right: 20%;
   font-size: 42px;
+  color: #6C3122;
 }
 
 #content{
@@ -26,24 +27,31 @@
   padding: 120px 0px;
 }
 
-#content .single-content{
+#content .content1{
   margin: 100px 0px;
 }
 
-#content .single-content .content-text{
+#content .content1 .content-text{
   margin: 10px;
+  text-align: left;
 }
 
-#content .single-content .content-text hr{
+#content .content1 .content-text h1{
+  color: #591616;
+}
+
+#content .content1 .content-text hr{
   width: 30%;
   margin: 50px 0px;
 }
 
-#content .single-content .content-text p{
+#content .content1 .content-text p{
   font-size: 18px;
+  text-align: left;
+  color: #707070;
 }
 
-#content .single-content .content-img{
+#content .content1 .content-img{
   width: 100%;
   margin: 10px;
   display: flex;
@@ -51,7 +59,46 @@
   justify-content: center;
 }
 
-#content .single-content .content-img img{
+#content .content1 .content-img img{
+  width: 100%;
+  height: auto;
+}
+
+#content .content2{
+  margin: 100px 0px;
+}
+
+#content .content2 .content-text{
+  margin: 10px;
+  text-align: right;
+}
+
+#content .content2 .content-text h1{
+  color: #591616;
+}
+
+#content .content2 .content-text hr{
+  width: 30%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 0px;
+}
+
+#content .content2 .content-text p{
+  font-size: 18px;
+  text-align: left;
+  color: #707070;
+}
+
+#content .content2 .content-img{
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content .content2 .content-img img{
   width: 100%;
   height: auto;
 }

@@ -56,9 +56,9 @@ a:hover{
   background-image: url(../image/menu-24px.svg);
 }
 
-.nav-link {
+.navbar-light .navbar-nav .nav-link {
   text-align: center;
-  color: #000000;
+  color: #452712;
 }
 
 #footer{

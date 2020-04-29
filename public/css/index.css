@@ -21,6 +21,10 @@
   margin: 47px;
 }
 
+#banner .header .header-link a{
+  color: #452712;
+}
+
 #banner .banner .banner-graphic {
   display: flex;
   text-align: center;
@@ -43,6 +47,7 @@
 #banner .banner .banner-text h1 {
   margin-bottom: 45px;
   font-size: 42px;
+  color: #591616;
 }
 
 #banner .banner .banner-text .search-link {
@@ -162,6 +167,7 @@
 
 #feature .feature-area h1 {
   font-size: 40px;
+  color: #591616;
 }
 
 #feature .feature-area .feature-img {
