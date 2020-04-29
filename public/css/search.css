@@ -1,0 +1,165 @@
+#header {
+    opacity: 0;
+}
+
+/* banner section */
+
+
+#banner {
+    width: 100%;
+    background: url(../image/search/banner_background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#banner .header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner .header .header-logo {
+    margin: 47px;
+}
+
+#banner .banner {
+    margin-top: 46px;
+}
+
+.banner-title h1 {
+    color: #591616;
+}
+
+.banner-search-box {
+    color: #ffffff;
+    margin-bottom: 200px;
+}
+
+.searchbox-bg {
+    background: linear-gradient(180deg, #591616aa 0%, #AE3E3Eaa 100%);
+    padding: 75px 10px;
+}
+
+.banner-title {
+    margin-bottom: 50px;
+
+}
+
+.banner-search-box .col-filter_group {
+    border-right: #ffffff 1px solid;
+    padding: 0px 50px;
+}
+
+.banner-search-box .col-filter_group:last-child {
+    border-right: none;
+    padding-right: 90px;
+}
+
+.button-continue {
+    margin: auto 0 auto -40px;
+    height: 80px;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 100%;
+    background: url("../image/search/ic_continue.png"), linear-gradient(101.1deg, #F2F77C 10.04%, #FFDB79 31.61%, #FFE1F4 93.64%);
+}
+
+.button-continue:hover {
+    background: url("../image/search/ic_continue.png"), linear-gradient(101.1deg, #F2F77C 50.04%, #FFDB79 61.61%, #FFE1F4 100%);
+
+}
+
+#banner .banner .banner-dot1 {
+    position: absolute;
+    z-index: 10;
+    margin-left: 10%;
+}
+
+#banner .banner .banner-dot2 {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    margin-top: 30%;
+    margin-right: 8%;
+}
+
+/* search form */
+select.form-control,
+option {
+    color: #591616;
+}
+
+select.form-control,
+input.form-control {
+    border: 1px solid #E8D8D8;
+    border-radius: 5px;
+}
+
+*[value="none"] {
+    opacity: 0.5;
+}
+
+/* search result section */
+.result {
+    width: 100%;
+    padding: 100px 0px;
+    background: url(../image/line_background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.aside-section {
+    background: #FFFFFF;
+    border: 1px solid #AE3E3E;
+    border-top: 5px solid #AE3E3E;
+    color: #591616;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 24px;
+    margin-bottom: 50px;
+}
+
+.aside-section .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.result .row {
+    align-content: flex-start;
+}
+
+.result .result-card {
+    background: #FFFFFF;
+    /* light-brown */
+
+    border: 1px solid #E8D8D8;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.result .result-card .available {
+    padding: 5px 10px;
+    position: absolute;
+    border-radius: 5px;
+    top: 10px;
+    z-index: 100;
+    right: 30px;
+    background: #ffffff;
+    color: #591616;
+}
+
+.result .result-card img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.result .result-card .room-info {
+    padding: 10px;
+    color: #707070;
+}
+
+.result .result-card .info-name {
+    color: #AE3E3E;
+}
