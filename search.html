@@ -1,549 +1,548 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>伴居</title>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>伴居</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
-        <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href='css/general.css'>
-        <link rel="stylesheet" href='css/search.css'>
-    </head>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href='css/general.css'>
+    <link rel="stylesheet" href='css/search.css'>
+</head>
 
-    <body>
-        <nav id="header" class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="./index.html"><img src="image/logo_navbar.svg"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="left"></div>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">關於伴居</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">搜尋空間</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">入住申請</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about_us.html">關於我們</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <section id="banner">
-            <div class="header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="header-logo">
-                                <img src="./image/logo_hexagon.svg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4"></div>
-                        <div class="col-1">
-                            <div class="header-link">
-                                <a href="./index.html">關於伴居</a>
-                            </div>
-                        </div>
-                        <div class="col-1">
-                            <div class="header-link">
-                                <a href="#">搜尋空間</a>
-                            </div>
-                        </div>
-                        <div class="col-1">
-                            <div class="header-link">
-                                <a href="#">入住申請</a>
-                            </div>
-                        </div>
-                        <div class="col-1">
-                            <div class="header-link">
-                                <a href="./about_us.html">關於我們</a>
-                            </div>
-                        </div>
-                        <div class="col-4"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner">
-                <div class="banner-content d-flex flex-column">
-                    <div class="banner-title mx-auto">
-                        <h1>立即尋找你喜歡的公寓吧！</h1>
-                    </div>
-                    <div class="banner-dot1">
-                        <img src="./image/dots.svg" alt="">
-                    </div>
-                    <div class="banner-dot2">
-                        <img src="./image/dots.svg" alt="">
-                    </div>
-                    <div class="banner-search-box mx-auto d-flex ">
-                        <div class="searchbox-bg">
-                            <form action="">
-                                <div class="d-flex">
-                                    <div class="flex-fill col-filter_group  border-right">
-                                        <div class="form-group">
-                                            <label for="city">縣市：</label>
-                                            <select class="form-control" name="city" id="city">
-                                                <option value="none" selected hidden>選擇縣市</option>
-                                                <option>台北市</option>
-                                                <option>新北市</option>
-                                                <option>桃園市</option>
-                                                <option>台中市</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="district">區域：</label>
-                                            <select class="form-control" name="district" id="district">
-                                                <option value="none" selected hidden>選擇區域</option>
-                                                <option>中正區</option>
-                                                <option>大安區</option>
-                                                <option>大同區</option>
-                                                <option>萬華區</option>
-                                                <option>信義區</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="flex-fill col-filter_group border-right">
-                                        <div class="form-group">
-                                            <label for="sex">性別：</label>
-                                            <select class="form-control" name="sex" id="sex">
-                                                <option value="none" selected hidden>選擇性別</option>
-                                                <option>男</option>
-                                                <option>女</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="available-date">入住日期：</label>
-                                            <input class="form-control" name="" type="date" value="available-date"
-                                                id="available-date">
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="flex-fill col-filter_group">
-                                        <div class="form-group">
-                                            <label for="price">價格區間：</label>
-                                            <select class="form-control" name="price" id="price">
-                                                <option value="none" selected hidden>價格區間</option>
-                                                <option>5,000~10,000</option>
-                                                <option>10,000~20,000</option>
-                                                <option>20,000~30,000</option>
-                                                <option>30,000~40,000</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="room">房型：</label>
-                                            <select class="form-control" name="room" id="room">
-                                                <option value="none" selected hidden>選擇房型</option>
-                                                <option>獨立套房</option>
-                                                <option>雅房</option>
-                                                <option>整層住家</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <button class="d-block button-continue">
-
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section class="result">
+<body>
+    <nav id="header" class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="./index.html"><img src="image/logo_navbar.svg"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="left"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">關於伴居</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">搜尋空間</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">入住申請</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about_us.html">關於我們</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="banner">
+        <div class="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 aside">
-                        <div class="aside-section filter">
-                            <div class="title"><img src="./image/search/ic_filter.png" alt="">
-                                條件篩選</div>
-
-                            <form action="">
-                                <div class="d-flex flex-column">
-                                    <div class="flex-fill col-filter_group">
-                                        <div class="form-group">
-                                            <label for="city">縣市：</label>
-                                            <select class="form-control" name="city" id="city">
-                                                <option value="none" selected hidden>選擇縣市</option>
-                                                <option>台北市</option>
-                                                <option>新北市</option>
-                                                <option>桃園市</option>
-                                                <option>台中市</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="district">區域：</label>
-                                            <select class="form-control" name="district" id="district">
-                                                <option value="none" selected hidden>選擇區域</option>
-                                                <option>中正區</option>
-                                                <option>大安區</option>
-                                                <option>大同區</option>
-                                                <option>萬華區</option>
-                                                <option>信義區</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="flex-fill col-filter_group">
-                                        <div class="form-group">
-                                            <label for="sex">性別：</label>
-                                            <select class="form-control" name="sex" id="sex">
-                                                <option value="none" selected hidden>選擇性別</option>
-                                                <option>男</option>
-                                                <option>女</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="available-date">入住日期：</label>
-                                            <input class="form-control" name="" type="date" value="available-date"
-                                                id="available-date">
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="flex-fill col-filter_group">
-                                        <div class="form-group">
-                                            <label for="price">價格區間：</label>
-                                            <select class="form-control" name="price" id="price">
-                                                <option value="none" selected hidden>價格區間</option>
-                                                <option>5,000~10,000</option>
-                                                <option>10,000~20,000</option>
-                                                <option>20,000~30,000</option>
-                                                <option>30,000~40,000</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="room">房型：</label>
-                                            <select class="form-control" name="room" id="room">
-                                                <option>獨立套房</option>
-                                                <option>雅房</option>
-                                                <option>整層住家</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="aside-section sort">
-                            <div class="title"><img src="./image/search/ic_sort.png" alt="">
-                                排序</div>
-                            <div class="form-group">
-                                <select class="form-control" name="sorting" id="sorting">
-                                    <option value="none" selected hidden>選擇排序</option>
-                                    <option>價格</option>
-                                    <option>入住日期</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-9 row flex-wrap">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image01.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image02.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image03.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image04.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image05.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image06.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image07.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image08.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image09.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image10.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image11.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image12.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image13.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image14.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="result-card">
-                                <img src="./image/search/room-image15.jpg" alt="">
-                                <div class="available">立即入住</div>
-                                <div class="room-info">
-                                    <div class="d-flex">
-                                        <div class="info-district mr-auto">台北市大安區</div>
-                                        <div class="info-room">獨立套房</div>
-                                        <div class="info-area">20坪</div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="info-name mr-auto">忠孝快樂窩</div>
-                                        <div class="info-room">NT22000~25000/月</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer id="footer">
-            <div class="container">
-                <div class="footer-top">
-                    <div class="row">
-                        <div class="col-1 footer-logo">
+                    <div class="col">
+                        <div class="header-logo">
                             <img src="./image/logo_hexagon.svg">
                         </div>
-                        <div class="col-4 footer-info">
-                            <div class="single-info">
-                                <img src="./image/footer_icon_place.svg" alt="">
-                                <p>台北市快樂區肥宅路362巷38號</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-2 col-12"></div>
+                    <div class="col-lg-1 col-md-2 col-12">
+                        <div class="header-link">
+                            <a href="./index.html">關於伴居</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-12">
+                        <div class="header-link">
+                            <a href="#">搜尋空間</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-12">
+                        <div class="header-link">
+                            <a href="#">入住申請</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-12">
+                        <div class="header-link">
+                            <a href="./about_us.html">關於我們</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-2 col-12"></div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-content d-flex flex-column">
+                <div class="banner-title mx-3 mx-md-auto">
+                    <h1>立即尋找你喜歡的公寓吧！</h1>
+                </div>
+                <div class="banner-dot1">
+                    <img src="./image/dots.svg" alt="">
+                </div>
+                <div class="banner-dot2">
+                    <img src="./image/dots.svg" alt="">
+                </div>
+                <div class="banner-search-box mx-auto d-md-flex ">
+                    <div class="searchbox-bg">
+                        <form action="">
+                            <div class="d-flex flex-column flex-md-row">
+                                <div class="flex-fill col-filter_group border-right">
+                                    <div class="form-group">
+                                        <label for="city">縣市：</label>
+                                        <select class="form-control" name="city" id="city">
+                                            <option value="none" selected hidden>選擇縣市</option>
+                                            <option>台北市</option>
+                                            <option>新北市</option>
+                                            <option>桃園市</option>
+                                            <option>台中市</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="district">區域：</label>
+                                        <select class="form-control" name="district" id="district">
+                                            <option value="none" selected hidden>選擇區域</option>
+                                            <option>中正區</option>
+                                            <option>大安區</option>
+                                            <option>大同區</option>
+                                            <option>萬華區</option>
+                                            <option>信義區</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex-fill col-filter_group border-right">
+                                    <div class="form-group">
+                                        <label for="sex">性別：</label>
+                                        <select class="form-control" name="sex" id="sex">
+                                            <option value="none" selected hidden>選擇性別</option>
+                                            <option>男</option>
+                                            <option>女</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="available-date">入住日期：</label>
+                                        <input class="form-control" name="" type="date" value="available-date"
+                                            id="available-date">
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex-fill col-filter_group">
+                                    <div class="form-group">
+                                        <label for="price">價格區間：</label>
+                                        <select class="form-control" name="price" id="price">
+                                            <option value="none" selected hidden>價格區間</option>
+                                            <option>5,000~10,000</option>
+                                            <option>10,000~20,000</option>
+                                            <option>20,000~30,000</option>
+                                            <option>30,000~40,000</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="room">房型：</label>
+                                        <select class="form-control" name="room" id="room">
+                                            <option value="none" selected hidden>選擇房型</option>
+                                            <option>獨立套房</option>
+                                            <option>雅房</option>
+                                            <option>整層住家</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="single-info">
-                                <img src="./image/footer_icon_mail.svg" alt="">
-                                <p>happycolaandcat@gmail.com</p>
+                        </form>
+                    </div>
+                    <button class="d-block button-continue">
+
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="result">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 aside">
+                    <div class="aside-section filter">
+                        <div class="title"><img src="./image/search/ic_filter.png" alt="">
+                            條件篩選</div>
+
+                        <form action="">
+                            <div class="d-flex flex-column">
+                                <div class="flex-fill col-filter_group">
+                                    <div class="form-group">
+                                        <label for="city">縣市：</label>
+                                        <select class="form-control" name="city" id="city">
+                                            <option value="none" selected hidden>選擇縣市</option>
+                                            <option>台北市</option>
+                                            <option>新北市</option>
+                                            <option>桃園市</option>
+                                            <option>台中市</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="district">區域：</label>
+                                        <select class="form-control" name="district" id="district">
+                                            <option value="none" selected hidden>選擇區域</option>
+                                            <option>中正區</option>
+                                            <option>大安區</option>
+                                            <option>大同區</option>
+                                            <option>萬華區</option>
+                                            <option>信義區</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex-fill col-filter_group">
+                                    <div class="form-group">
+                                        <label for="sex">性別：</label>
+                                        <select class="form-control" name="sex" id="sex">
+                                            <option value="none" selected hidden>選擇性別</option>
+                                            <option>男</option>
+                                            <option>女</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="available-date">入住日期：</label>
+                                        <input class="form-control" name="" type="date" value="available-date"
+                                            id="available-date">
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex-fill col-filter_group">
+                                    <div class="form-group">
+                                        <label for="price">價格區間：</label>
+                                        <select class="form-control" name="price" id="price">
+                                            <option value="none" selected hidden>價格區間</option>
+                                            <option>5,000~10,000</option>
+                                            <option>10,000~20,000</option>
+                                            <option>20,000~30,000</option>
+                                            <option>30,000~40,000</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="room">房型：</label>
+                                        <select class="form-control" name="room" id="room">
+                                            <option>獨立套房</option>
+                                            <option>雅房</option>
+                                            <option>整層住家</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="single-info">
-                                <img src="./image/footer_icon_phone.svg" alt="">
-                                <p>+886 2 1234 5678 </p>
+                        </form>
+                    </div>
+                    <div class="aside-section sort">
+                        <div class="title"><img src="./image/search/ic_sort.png" alt="">
+                            排序</div>
+                        <div class="form-group">
+                            <select class="form-control" name="sorting" id="sorting">
+                                <option value="none" selected hidden>選擇排序</option>
+                                <option>價格</option>
+                                <option>入住日期</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-0 col-md-9 row flex-wrap">
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image01.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-5"></div>
-                        <div class="col-2 footer-link">
-                            <a href="#"><img src="./image/footer_icon_facebook.svg" alt=""></a>
-                            <a href="#"><img src="./image/footer_icon_instagram.svg" alt=""></a>
-                            <a href="#"><img src="./image/footer_icon_youtube.svg" alt=""></a>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image02.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image03.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image04.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image05.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image06.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image07.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image08.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image09.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image10.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image11.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image12.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image13.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image14.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-lg-4 col-md-6">
+                        <div class="result-card">
+                            <img src="./image/search/room-image15.jpg" alt="">
+                            <div class="available">立即入住</div>
+                            <div class="room-info">
+                                <div class="d-flex">
+                                    <div class="info-district mr-auto">台北市大安區</div>
+                                    <div class="info-room">獨立套房</div>
+                                    <div class="info-area">20坪</div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="info-name mr-auto">忠孝快樂窩</div>
+                                    <div class="info-room">NT22000~25000/月</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2020 TeamNTUT_WebDesign. All Rights Reserved.</p>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-2 col-md-1 footer-logo mx-auto mx-md-0">
+                        <img src="./image/logo_hexagon.svg">
+                    </div>
+                    <div class="col-md-auto footer-info">
+                        <div class="single-info">
+                            <img src="./image/footer_icon_place.svg" alt="">
+                            <p>台北市快樂區肥宅路362巷38號</p>
+                        </div>
+                        <div class="single-info">
+                            <img src="./image/footer_icon_mail.svg" alt="">
+                            <p>happycolaandcat@gmail.com</p>
+                        </div>
+                        <div class="single-info">
+                            <img src="./image/footer_icon_phone.svg" alt="">
+                            <p>+886 2 1234 5678 </p>
+                        </div>
+                    </div>
+                    <div class="col-auto ml-md-auto footer-link">
+                        <a href="#"><img src="./image/footer_icon_facebook.svg" alt=""></a>
+                        <a href="#"><img src="./image/footer_icon_instagram.svg" alt=""></a>
+                        <a href="#"><img src="./image/footer_icon_youtube.svg" alt=""></a>
+                    </div>
+                </div>
             </div>
-        </footer>
-        <script src="js/navbar_effect.js"></script>
-    </body>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2020 TeamNTUT_WebDesign. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/navbar_effect.js"></script>
+</body>
 
 </html>
