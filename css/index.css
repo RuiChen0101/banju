@@ -304,6 +304,10 @@
 }
 
 @media screen and (max-width: 1024px){
+  #banner .header .col-lg-1{
+    padding: 0px;
+  }
+
   #banner .banner .banner-text h1 {
     font-size: 26px;
   }
@@ -318,7 +322,7 @@
   }
 
   #about .about-dot1 {
-    margin-right: 18%;
+    margin-right: 15%;
   }
 
   #about .about-background-deco {
