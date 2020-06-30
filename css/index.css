@@ -185,7 +185,6 @@
 #feature .feature-area .feature-img-beckground {
   position: absolute;
   z-index: 0;
-
 }
 
 #feature .feature-area .feature-img-beckground img {
@@ -221,7 +220,6 @@
   margin: 0px;
   color: #707070;
   text-align: left;
-
 }
 
 /* search */
@@ -293,4 +291,161 @@
   right: 0;
   margin-top: 30%;
   margin-right: 8%;
+}
+
+@media screen and (max-width: 1280px){
+  #banner .banner .banner-text h1 {
+    font-size: 36px;
+  }
+
+  #about .about-dot1 {
+    margin-top: 15%;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  #banner .header .col-lg-1{
+    padding: 0px;
+  }
+
+  #banner .banner .banner-text h1 {
+    font-size: 26px;
+  }
+
+  #banner .banner .banner-dot2 {
+    margin-top: 25%;
+    margin-right: 8%;
+  }
+
+  #about .about-area {
+    padding: 50px 25px;
+  }
+
+  #about .about-dot1 {
+    margin-right: 15%;
+  }
+
+  #about .about-background-deco {
+    margin-right: 5%;
+    margin-top: -2%;
+  }
+
+  #about .about-background-deco img {
+    width: 540px;
+    height: auto;
+  }
+
+  #feature .feature-area .feature-img-beckground img {
+    width: 380px;
+    height: auto;
+    margin-top: 50%;
+  }
+}
+
+@media screen and (max-width: 769px){
+  #banner .banner{
+    margin-top: 20px;
+  }
+
+  #banner .banner .banner-text {
+    margin-top: 3%;
+    margin-left: 5%;
+  }
+
+  #banner .banner .banner-text .search-link {
+    font-size: 16px;
+  }
+
+  #banner .banner .banner-dot1 img{
+    width: 50%;
+  }
+
+  #banner .banner .banner-dot2 {
+    margin-top: 30%;
+    margin-right: 4%;
+  }
+
+  #banner .banner .banner-dot2 img{
+    width: 50%;
+  }
+
+  #about {
+    height: 800px;
+  }
+
+  #about .about-background-deco {
+    margin-right: 20%;
+    margin-top: -5%;
+  }
+
+  #about .about-background-deco img {
+    width: 600px;
+    height: auto;
+  }
+
+  #about .about-dot1 {
+    margin-top: 25%;
+  }
+
+  #feature .feature-area .feature-img img {
+    width: 70%;
+    height: auto;
+  }
+
+  #feature .feature-area .feature-img-beckground img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 376px){
+  #banner .header .col-3{
+    padding: 0px;
+  }
+
+  #banner .banner .banner-dot1 {
+    display: none;
+  }
+
+  #banner .banner .banner-dot2 {
+    display: none;
+  }
+
+  #about .about-area .about-title h1 {
+    font-size: 32px;
+  }
+
+  #about .about-background-deco {
+    display: none;
+  }
+
+  #about .about-dot1 {
+    display: none;
+  }
+
+  #feature {
+    padding: 50px 0px;
+  }
+
+  #feature .feature-area h1 {
+    font-size: 28px;
+  }
+
+  #feature .single-feature {
+    margin: 10px 0px;
+  }
+
+  #feature .single-feature .feature-text h4 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #feature .single-feature .feature-text p {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  /* 我先藏起來不然其他section不好調 */
+  #search{
+    display: none;
+  }
 }
