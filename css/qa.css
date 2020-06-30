@@ -1,0 +1,95 @@
+body{
+  background: url(../image/index/section1.png);
+  background-repeat: no-repeat;
+}
+
+hr{
+  width: 100%;
+  border-top: 1px solid #959595;
+}
+
+.vl {
+  width: 1%;
+  border-left: 4px solid #ae3e3e;
+  height: 100px;
+}
+
+#banner{
+  height: 550px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner .banner-text{
+  width: 50%;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(89, 22, 22, 0.65) 0%, rgba(174, 62, 62, 0.65) 100%);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner .banner-text h1{
+  color: #FFFFFF;
+  font-size: 42px;
+}
+
+/* question section */
+
+#question{
+  width: 100%;
+}
+
+#question .row{
+  margin: 0px;
+}
+
+#question .question-area{
+  width: 100%;
+  padding: 50px;
+  background: url(../image/line_background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#question .question-title{
+  width: 100%;
+}
+
+#question .signal-question{
+  width: 100%;
+}
+
+#question .signal-question h3{
+  width: 100%;
+  font-size: 26px;
+  margin: 20px 0px;
+  color: #591616;
+}
+
+#question .signal-question p{
+  width: 100%;
+  margin: 20px 0px;
+  padding: 0px 20px;
+  color: #707070;
+}
+
+@media screen and (max-width: 1024px){
+  #question .question-title .vl{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 376px){
+  #banner{
+    height: 350px;
+  }
+
+  #banner .banner-text{
+    width: 80%;
+    height: 150px;
+  }
+}
