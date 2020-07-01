@@ -35,6 +35,19 @@
 #banner .banner .banner-graphic img {
   height: auto;
   width: 73%;
+  animation-name: down_fade_in;
+  animation-duration:3s;
+}
+
+@keyframes down_fade_in{
+  0%{
+    opacity: 0;
+    margin-top: 100px;
+  }
+  100%{
+    opacity: 1;
+    margin-top: 0px;
+  }
 }
 
 #banner .banner .banner-text {
@@ -42,6 +55,19 @@
   z-index: 20;
   margin-top: 3%;
   margin-left: 15%;
+  animation-name: left_fade_in;
+  animation-duration:3s;
+}
+
+@keyframes left_fade_in{
+  0%{
+    opacity: 0;
+    margin-left: 5%;
+  }
+  100%{
+    opacity: 1;
+    margin-left: 15%;
+  }
 }
 
 #banner .banner .banner-text h1 {
@@ -62,6 +88,8 @@
   position: absolute;
   z-index: 10;
   margin-left: 10%;
+  animation-name: fade_in;
+  animation-duration:3s;
 }
 
 #banner .banner .banner-dot2 {
@@ -70,6 +98,17 @@
   right: 0;
   margin-top: 30%;
   margin-right: 8%;
+  animation-name: fade_in;
+  animation-duration:3s;
+}
+
+@keyframes fade_in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 /* about-us section */
@@ -352,6 +391,17 @@
     margin-left: 5%;
   }
 
+  @keyframes left_fade_in{
+    0%{
+      opacity: 0;
+      margin-left: 0%;
+    }
+    100%{
+      opacity: 1;
+      margin-left: 5%;
+    }
+  }
+
   #banner .banner .banner-text .search-link {
     font-size: 16px;
   }
@@ -400,6 +450,14 @@
 @media screen and (max-width: 376px){
   #banner .header .col-3{
     padding: 0px;
+  }
+
+  #banner .banner .banner-graphic img {
+    width: 100%;
+  }
+
+  #banner .banner .banner-text {
+    position: relative;
   }
 
   #banner .banner .banner-dot1 {
