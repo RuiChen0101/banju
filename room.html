@@ -57,6 +57,16 @@
                     <div class="searchbox-bg">
                         <div class="banner-title mx-3 mx-md-auto">
                             <h1>忠孝小寓</h1>
+                            <hr>
+                        </div>
+                        <div class="banner--desc">
+                            4房1廳3衛
+                        </div>
+                        <div class="banner--desc">
+                            40坪
+                        </div>
+                        <div class="banner--desc">
+                            剩下<span class="bigNum">3</span>床位
                         </div>
                     </div>
                 </div>
@@ -268,19 +278,19 @@
         firebase.analytics();
         let db = firebase.firestore();
         let spacesRef = db.collection("Spaces");
-        spacesRef.doc("0001").set({
-            "name": "忠孝小公寓",
-            "rooms": [
-                {
-                    "name": "雙人房A"
-
-                },
-                {
-                    "name": "雙人房B"
-
-                }
-            ]
-        });
+        //spacesRef.doc("0001").set({
+        //    "name": "忠孝小公寓",
+        //    "rooms": [
+        //        {
+        //            "name": "雙人房A"
+//
+        //        },
+        //        {
+        //            "name": "雙人房B"
+//
+        //        }
+        //    ]
+        //});
     </script>
 </body>
 

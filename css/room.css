@@ -26,10 +26,16 @@
   color: #ffffff;
   margin-bottom: 200px;
 }
-
+.searchbox-bg hr {
+  border-color: white;
+}
+.searchbox-bg .bigNum {
+  color: white;
+}
 .searchbox-bg {
   background: linear-gradient(180deg, #591616aa 0%, #ae3e3eaa 100%);
-  padding: 75px 10px;
+  padding: 75px 100px;
+  text-align: center;
 }
 
 #banner .banner .banner-dot1 {
