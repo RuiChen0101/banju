@@ -13,7 +13,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href='css/general.css'>
-    <link rel="stylesheet" href='css/search.css'>
+    <link rel="stylesheet" href='css/room.css'>
 </head>
 
 <body>
@@ -42,47 +42,11 @@
             </ul>
         </div>
     </nav>
+
+    <section id="header-space"></section>
     <section id="banner">
-        <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="header-logo">
-                            <img src="./image/logo_hexagon.svg">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-2 col-12"></div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="./index.html">關於伴居</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="#">搜尋空間</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="#">入住申請</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="./about_us.html">關於我們</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-2 col-12"></div>
-                </div>
-            </div>
-        </div>
         <div class="banner">
             <div class="banner-content d-flex flex-column">
-                <div class="banner-title mx-3 mx-md-auto">
-                    <h1>忠孝小寓</h1>
-                </div>
                 <div class="banner-dot1">
                     <img src="./image/dots.svg" alt="">
                 </div>
@@ -91,89 +55,22 @@
                 </div>
                 <div class="banner-search-box mx-auto d-md-flex ">
                     <div class="searchbox-bg">
-                        <form action="">
-                            <div class="d-flex flex-column flex-md-row">
-                                <div class="flex-fill col-filter_group border-right">
-                                    <div class="form-group">
-                                        <label for="city">縣市：</label>
-                                        <select class="form-control" name="city" id="city">
-                                            <option value="none" selected hidden>選擇縣市</option>
-                                            <option>台北市</option>
-                                            <option>新北市</option>
-                                            <option>桃園市</option>
-                                            <option>台中市</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="district">區域：</label>
-                                        <select class="form-control" name="district" id="district">
-                                            <option value="none" selected hidden>選擇區域</option>
-                                            <option>中正區</option>
-                                            <option>大安區</option>
-                                            <option>大同區</option>
-                                            <option>萬華區</option>
-                                            <option>信義區</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="flex-fill col-filter_group border-right">
-                                    <div class="form-group">
-                                        <label for="sex">性別：</label>
-                                        <select class="form-control" name="sex" id="sex">
-                                            <option value="none" selected hidden>選擇性別</option>
-                                            <option>男</option>
-                                            <option>女</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="available-date">入住日期：</label>
-                                        <input class="form-control" name="" type="date" value="available-date"
-                                            id="available-date">
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="flex-fill col-filter_group">
-                                    <div class="form-group">
-                                        <label for="price">價格區間：</label>
-                                        <select class="form-control" name="price" id="price">
-                                            <option value="none" selected hidden>價格區間</option>
-                                            <option>5,000~10,000</option>
-                                            <option>10,000~20,000</option>
-                                            <option>20,000~30,000</option>
-                                            <option>30,000~40,000</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="room">房型：</label>
-                                        <select class="form-control" name="room" id="room">
-                                            <option value="none" selected hidden>選擇房型</option>
-                                            <option>獨立套房</option>
-                                            <option>雅房</option>
-                                            <option>整層住家</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="banner-title mx-3 mx-md-auto">
+                            <h1>忠孝小寓</h1>
+                        </div>
                     </div>
-                    <button class="d-block button-continue">
-
-                    </button>
                 </div>
             </div>
 
         </div>
     </section>
-    <section class="result">
+    <section class="stripe">
         <div class="container">
-            <div class="card">
+            <div class="card location my-5">
                 <div class="section--title">
                     地點
                 </div>
-                <div class="google-map">
-                    <img src="./image/space/map.jpg" alt="">
-                </div>
+                <hr>
                 <div class="desc">
                     <ul>
                         <li>距離忠孝新生站三分鐘</li>
@@ -183,82 +80,126 @@
                         <li>公館商圈</li>
                     </ul>
                 </div>
-            </div>
-            <div class="row gallery">
-                <div class="photo">
-                    <img src="./image/search/room-image01.jpg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="./image/search/room-image01.jpg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="./image/search/room-image01.jpg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="./image/search/room-image01.jpg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="./image/search/room-image01.jpg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="./image/search/room-image01.jpg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="./image/search/room-image01.jpg" alt="">
+                <div class="google-map">
+                    <img src="./image/space/map.jpg" alt="">
                 </div>
             </div>
-            <div class="card facilities">
-                <div class="section--title">公共設施</div>
+            <div class="card gallery my-5">
+                <div class="section--title">照片</div>
+                <hr>
                 <div class="row">
-                    <div class="facility">
 
+                    <div class="photo">
+                        <img src="./image/search/room-image01.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="./image/search/room-image01.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="./image/search/room-image01.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="./image/search/room-image01.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="./image/search/room-image01.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="./image/search/room-image01.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="./image/search/room-image01.jpg" alt="">
                     </div>
                 </div>
             </div>
+            <div class="card facilities my-5">
+                <div class="section--title">公共設施</div>
+                <hr>
+                <div class="row">
+                    <div class="facility">冷氣</div>
+                    <div class="facility">網絡</div>
+                    <div class="facility">除濕機</div>
+                    <div class="facility">洗衣機</div>
+                    <div class="facility">烘衣機</div>
+                    <div class="facility">飲水機</div>
+                    <div class="facility">電視機</div>
+                    <div class="facility">沙發</div>
+                    <div class="facility">茶几</div>
+                    <div class="facility">餐桌椅</div>
+                    <div class="facility">微波爐</div>
+                    <div class="facility">冰箱</div>
+                    <div class="facility">電磁爐</div>
+                    <div class="facility">厨具</div>
+                </div>
+            </div>
             <div class="row pricing-table">
-                <div class="col card room--1">
+                <div class="col-12 col-sm card room">
                     <div class="room--type">單人房</div>
-                    <div class="room--rent">NT10000</div>
-                    <div class="room--gender">限女性</div>
-                    <div class="room--availability">0/1</div>
+                    <div class="room--rent">NT <span class="bigNum">10000</span></div>
+                    <div class="room--gender">
+                        <p>限女性</p>
+                    </div>
+                    <div class="room--availability">
+                        <div class="status"><img src="./image/room/space-empty.png" alt=""></div>
+                    </div>
                     <div class="room--size">5坪</div>
                     <div class="room--content">單人床</div>
                     <div class="room--content">附桌椅、櫥櫃</div>
                     <div class="room--content">公共衛浴</div>
-                    <div class="room-book">預約看房</div>
+                    <div class="room--book"><button class="btn">預約看房</button></div>
                 </div>
-                <div class="col card room--1">
+                <div class="col-12 col-sm card room">
                     <div class="room--type">雙人房</div>
-                    <div class="room--rent">NT8500</div>
+                    <div class="room--rent">NT <span class="bigNum">8500</span></div>
                     <div class="room--gender">限女性</div>
-                    <div class="room--availability">2/2</div>
+                    <div class="room--availability">
+                        <div class="status">
+                            <img src="./image/room/space-empty.png" alt="">
+                            <img src="./image/room/space-full.png" alt="">
+                        </div>
+                    </div>
                     <div class="room--size">7坪</div>
                     <div class="room--content">單人床</div>
                     <div class="room--content">附桌椅、可鎖櫥櫃</div>
                     <div class="room--content">房内有衛浴</div>
-                    <div class="room-book">預約看房</div>
+                    <div class="room--book"><button class="btn">預約看房</button></div>
                 </div>
-                <div class="col card room--1">
+                <div class="col-12 col-sm card room">
                     <div class="room--type">4人房</div>
-                    <div class="room--rent">NT7000</div>
+                    <div class="room--rent">NT <span class="bigNum">7000</span></div>
                     <div class="room--gender">限男性</div>
-                    <div class="room--availability">1/4</div>
+                    <div class="room--availability">
+
+                        <div class="status">
+                            <img src="./image/room/space-empty.png" alt="">
+                            <img src="./image/room/space-full.png" alt="">
+                            <img src="./image/room/space-full.png" alt="">
+                            <img src="./image/room/space-full.png" alt="">
+                        </div>
+                    </div>
                     <div class="room--size">8坪</div>
                     <div class="room--content">上下鋪</div>
                     <div class="room--content">附桌椅、可鎖櫥櫃</div>
                     <div class="room--content">房内有衛浴</div>
-                    <div class="room-book">預約看房</div>
+                    <div class="room--book"><button class="btn">預約看房</button></div>
                 </div>
-                <div class="col card room--1">
+                <div class="col-12 col-sm card room">
                     <div class="room--type">4人房</div>
-                    <div class="room--rent">NT7000</div>
+                    <div class="room--rent">NT <span class="bigNum">7000</span></div>
                     <div class="room--gender">限女性</div>
-                    <div class="room--availability">0/4</div>
+                    <div class="room--availability">
+                        <div class="status">
+                            <img src="./image/room/space-full.png" alt="">
+                            <img src="./image/room/space-full.png" alt="">
+                            <img src="./image/room/space-full.png" alt="">
+                            <img src="./image/room/space-full.png" alt="">
+                        </div>
+                    </div>
                     <div class="room--size">8坪</div>
                     <div class="room--content">上下鋪</div>
                     <div class="room--content">附桌椅、可鎖櫥櫃</div>
                     <div class="room--content">公共衛浴</div>
-                    <div class="room-book">預約看房</div>
+                    <div class="room--book"><button class="btn">預約看房</button></div>
                 </div>
             </div>
         </div>
@@ -297,7 +238,6 @@
             <p>© 2020 TeamNTUT_WebDesign. All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="js/navbar_effect.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
@@ -326,6 +266,21 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+        let db = firebase.firestore();
+        let spacesRef = db.collection("Spaces");
+        spacesRef.doc("0001").set({
+            "name": "忠孝小公寓",
+            "rooms": [
+                {
+                    "name": "雙人房A"
+
+                },
+                {
+                    "name": "雙人房B"
+
+                }
+            ]
+        });
     </script>
 </body>
 

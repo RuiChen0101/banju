@@ -1,0 +1,96 @@
+#header {
+  opacity: 0;
+  z-index: 1000;
+}
+
+/* banner section */
+
+#banner {
+  width: 100%;
+  background: url(../image/search/banner_background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#banner .header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner .header .header-logo {
+  margin: 47px;
+}
+
+#banner .banner {
+  margin-top: 46px;
+  padding-bottom: 200px;
+}
+body {
+  width: 100%;
+  background: url(../image/line_background.png);
+  background-position: center;
+}
+.booking-form {
+  margin-top: -150px;
+  margin-bottom: 150px;
+  border: 1px solid #ae3e3e;
+}
+.form-title {
+  margin-bottom: 25px;
+  font-size: 42px;
+  color: #591616;
+  text-align: center;
+}
+.button-submit {
+  margin: auto auto;
+  margin-top: 50px;
+  height: 40px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(
+    101.1deg,
+    #f2f77c 10.04%,
+    #ffdb79 31.61%,
+    #ffe1f4 93.64%
+  );
+}
+
+.button-submit p {
+  color: #591616;
+  font-size: 20px;
+}
+@media only screen and (max-width: 321px) {
+  .button-submit {
+    margin: -40px auto;
+    transform: rotate(90deg);
+  }
+}
+
+.button-submit:hover {
+  background: linear-gradient(
+    101.1deg,
+    #f2f77c 50.04%,
+    #ffdb79 61.61%,
+    #ffe1f4 100%
+  );
+}
+
+/* booking form */
+select.form-control,
+option {
+  color: #591616;
+}
+
+select.form-control,
+input.form-control {
+  border: 1px solid #e8d8d8;
+  border-radius: 5px;
+}
+
+*[value="none"] {
+  opacity: 0.5;
+}
