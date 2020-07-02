@@ -54,20 +54,8 @@
                     <img src="./image/dots.svg" alt="">
                 </div>
                 <div class="banner-search-box mx-auto d-md-flex ">
-                    <div class="searchbox-bg">
-                        <div class="banner-title mx-3 mx-md-auto">
-                            <h1>忠孝小寓</h1>
-                            <hr>
-                        </div>
-                        <div class="banner--desc">
-                            4房1廳3衛
-                        </div>
-                        <div class="banner--desc">
-                            40坪
-                        </div>
-                        <div class="banner--desc">
-                            剩下<span class="bigNum">3</span>床位
-                        </div>
+                    <div class="searchbox-bg" id="space-details">
+                        <!--placeholder for space-details-->
                     </div>
                 </div>
             </div>
@@ -82,12 +70,8 @@
                 </div>
                 <hr>
                 <div class="desc">
-                    <ul>
-                        <li>距離忠孝新生站三分鐘</li>
-                        <li>距離公館捷運站1分鐘</li>
-                        <li>臨近寧夏夜市</li>
-                        <li>臨近臺大、師大、台科大</li>
-                        <li>公館商圈</li>
+                    <ul id="nbf">
+                        <!--nbf placeholder-->
                     </ul>
                 </div>
                 <div class="google-map">
@@ -97,67 +81,18 @@
             <div class="card gallery my-5">
                 <div class="section--title">照片</div>
                 <hr>
-                <div class="row">
-
-                    <div class="photo">
-                        <img src="./image/search/room-image01.jpg" alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="./image/search/room-image01.jpg" alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="./image/search/room-image01.jpg" alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="./image/search/room-image01.jpg" alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="./image/search/room-image01.jpg" alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="./image/search/room-image01.jpg" alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="./image/search/room-image01.jpg" alt="">
-                    </div>
+                <div class="row" id="photos-placeholder">
+                    <!--photos placeholder-->
                 </div>
             </div>
             <div class="card facilities my-5">
                 <div class="section--title">公共設施</div>
                 <hr>
-                <div class="row">
-                    <div class="facility">冷氣</div>
-                    <div class="facility">網絡</div>
-                    <div class="facility">除濕機</div>
-                    <div class="facility">洗衣機</div>
-                    <div class="facility">烘衣機</div>
-                    <div class="facility">飲水機</div>
-                    <div class="facility">電視機</div>
-                    <div class="facility">沙發</div>
-                    <div class="facility">茶几</div>
-                    <div class="facility">餐桌椅</div>
-                    <div class="facility">微波爐</div>
-                    <div class="facility">冰箱</div>
-                    <div class="facility">電磁爐</div>
-                    <div class="facility">厨具</div>
+                <div class="row" id="facilities-placeholder">
+                    <!--facilities placeholders-->
                 </div>
             </div>
-            <div class="row pricing-table">
-                <div class="col-12 col-sm card room">
-                    <div class="room--type">單人房</div>
-                    <div class="room--rent">NT <span class="bigNum">10000</span></div>
-                    <div class="room--gender">
-                        <p>限女性</p>
-                    </div>
-                    <div class="room--availability">
-                        <div class="status"><img src="./image/room/space-empty.png" alt=""></div>
-                    </div>
-                    <div class="room--size">5坪</div>
-                    <div class="room--content">單人床</div>
-                    <div class="room--content">附桌椅、櫥櫃</div>
-                    <div class="room--content">公共衛浴</div>
-                    <div class="room--book"><button class="btn">預約看房</button></div>
-                </div>
+            <div class="row pricing-table" id="rooms-placeholder">
                 <div class="col-12 col-sm card room">
                     <div class="room--type">雙人房</div>
                     <div class="room--rent">NT <span class="bigNum">8500</span></div>
@@ -277,20 +212,101 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         let db = firebase.firestore();
-        let spacesRef = db.collection("Spaces");
-        //spacesRef.doc("0001").set({
-        //    "name": "忠孝小公寓",
-        //    "rooms": [
-        //        {
-        //            "name": "雙人房A"
-//
-        //        },
-        //        {
-        //            "name": "雙人房B"
-//
-        //        }
-        //    ]
-        //});
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const id = urlParams.get('id')
+
+        let spacesRef = db.collection("Spaces").doc(id);
+
+        spacesRef.get().then(function (space) {
+
+            let id = space.id;
+            let area = space.data().area;
+            let city = space.data().city;
+            let district = space.data().district;
+            let name = space.data().name;
+            let priceRange = space.data().price_range;
+            let imageIndex = space.data().image_index;
+            let roomPattern = space.data().room_pattern;
+            let rooms = space.data().rooms;
+            let bed_empty = 0;
+
+            rooms.forEach(function (room) {
+                empty = room.empty | 0;
+                bed_empty += empty;
+            })
+            let nbfs = space.data().nearby_features;
+            let photos = space.data().photos;
+            let facilities = space.data().facilities;
+
+
+            $("#space-details").append(`
+                        <div class="banner--location">
+                            ${city} ${district} 
+                        </div>
+                        <div class="banner-title mx-3 mx-md-auto" >
+                            <h1>${name}</h1>
+                            <hr>
+                        </div>
+                        <div class="banner--desc">
+                            ${roomPattern}
+                        </div>
+                        <div class="banner--desc">
+                            ${area}坪
+                        </div>
+                        <div class="banner--desc">
+                            剩下<span class="bigNum">${bed_empty}</span>床位
+
+                        </div>`);
+            nbfs.forEach(function (nbf) {
+                $("#nbf").append(`<li>${nbf}</li>`);
+            })
+            photos.forEach(function (photo) {
+                $("#photos-placeholder").append(`
+                    <div class="photo">
+                        <img src="./image/search/room-image${photo}.jpg" alt="">
+                    </div>`);
+            })
+
+            facilities.forEach(function (f) {
+                $("#facilities-placeholder").append(`
+                    <div class="facility">${f}</div>
+                    `);
+            })
+            rooms.forEach(function (r) {
+                eb = r.r_emptyBedCount;
+                fb = r.r_bedCount - eb;
+                $("#rooms-placeholder").append(`
+                <div class="col-12 col-sm card room">
+                    <div class="room--type">${r.r_name}</div>
+                    <div class="room--rent">NT <span class="bigNum">${r.r_rent}</span></div>
+                    <div class="room--gender">${r.r_gender}</div>
+                    <div class="room--availability">
+                        <div class="status">
+                            
+                        </div>
+                    </div>
+                    <div class="room--size">${r.r_area}坪</div>
+                    <div class="room--content">${r.r_bedType}</div>
+                    <div class="room--content">${r.r_facilities}</div>
+                    <div class="room--content">${r.r_bathroom}</div>
+                    <div class="room--book"><button class="btn">預約看房</button></div>
+                </div>
+                `);
+                for (i = 0; i < eb; i++) {
+                    $(".status").append(`
+                            <img src="./image/room/space-empty.png" alt="">
+                            `);
+                }
+                for (i = 0; i < fb; i++) {
+                    $(".status").append(`
+                    <img src="./image/room/space-full.png" alt="">
+                            `);
+                }
+
+            })
+
+        })
     </script>
 </body>
 

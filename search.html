@@ -308,6 +308,7 @@
 
         spacesRef.get().then(function (querySnapshot) {
             querySnapshot.forEach(function (space) {
+                let id = space.id;
                 let area = space.data().area;
                 let city = space.data().city;
                 let district = space.data().district;
@@ -323,7 +324,7 @@
 
                 let cardItem = `
                     <div class="pr-0 col-lg-4 col-md-6">
-                        <a href="/room.html">
+                        <a href="/room.html?id=${id}">
                             <div class="result-card">
                                 <img src="./image/search/room-image${imageIndex}.jpg" alt="">
                                 <div class="available">立即入住</div>
