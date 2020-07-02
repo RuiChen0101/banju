@@ -1,40 +1,50 @@
-h1,h2,h3,h4,p,ul,li,a,button,span{
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+a,
+button,
+span {
   font-family: Microsoft JhengHei;
   color: #000000;
 }
 
-hr{
+hr {
   width: 15%;
   border-top: 4px solid #ae3e3e;
 }
 
-a:hover{
+a:hover {
   color: #000000;
 }
 
-.left{
-    margin-right: auto;
+.left {
+  margin-right: auto;
 }
 
-#header-space{
+#header-space {
   width: 100%;
   height: 65px;
 }
 
-#header{
+#header {
   background-color: #ffffff;
   -webkit-transition: opacity 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out;
   -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
+  border-bottom: 2px solid rgba(150, 14, 14, 0.05);
 }
 
-#header .navbar-nav .active{
+#header .navbar-nav .active {
   color: #960E0E;
-  border-bottom:  2px solid #960E0E;
+  border-bottom: 2px solid #960E0E;
 }
 
-#header .navbar-brand img{
+#header .navbar-brand img {
   margin-left: 10px;
   height: 35px;
 }
@@ -48,11 +58,11 @@ a:hover{
   z-index: 99;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: 1px solid #ffffff;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   background-image: url(../image/menu-24px.svg);
 }
 
@@ -61,69 +71,69 @@ a:hover{
   color: #452712;
 }
 
-#footer{
+#footer {
   background: #FFFFFF;
   width: 100%;
 }
 
-#footer .footer-top{
+#footer .footer-top {
   padding: 10px 0px;
 }
 
-#footer .footer-top .footer-logo{
+#footer .footer-top .footer-logo {
   padding: 10px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#footer .footer-top .footer-logo img{
+#footer .footer-top .footer-logo img {
   width: 80%;
   height: auto;
 }
 
-#footer .footer-top .footer-info{
+#footer .footer-top .footer-info {
   padding: 10px 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-#footer .footer-top .single-info{
+#footer .footer-top .single-info {
   margin: 5px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#footer .footer-top .single-info p{
+#footer .footer-top .single-info p {
   margin: 0px 5px;
 }
 
-#footer .footer-top .footer-link{
+#footer .footer-top .footer-link {
   padding: 10px 0px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
 
-#footer .footer-top .footer-link a{
+#footer .footer-top .footer-link a {
   margin: 0px 10px;
   text-align: center;
 }
 
-#footer .footer-top .footer-link a img{
+#footer .footer-top .footer-link a img {
   width: 70%;
   height: auto;
 }
 
-#footer .footer-bottom{
+#footer .footer-bottom {
   width: 100%;
   padding: 10px 0px;
   background-color: #000000;
 }
 
-#footer .footer-bottom p{
+#footer .footer-bottom p {
   width: 100%;
   margin: 0px;
   text-align: center;

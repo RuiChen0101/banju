@@ -1,246 +1,198 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>伴居</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>伴居</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
-    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href='css/general.css'>
-    <link rel="stylesheet" href='css/room.css'>
-</head>
+        <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href='css/general.css'>
+        <link rel="stylesheet" href='css/room.css'>
+    </head>
 
-<body>
+    <body>
 
-    <nav id="header" class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="./index.html"><img src="image/logo_navbar.svg"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="left"></div>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">關於伴居</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./search.html">搜尋空間</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./about_us.html">聯絡我們</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./qa.html">常見問題</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <nav id="header" class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="./index.html"><img src="image/logo_navbar.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="left"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">關於伴居</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./search.html">搜尋空間</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about_us.html">聯絡我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./qa.html">常見問題</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <section id="header-space"></section>
-    <section id="banner">
-        <div class="banner">
-            <div class="banner-content d-flex flex-column">
-                <div class="banner-dot1">
-                    <img src="./image/dots.svg" alt="">
+        <section id="header-space"></section>
+        <section id="banner">
+            <div class="banner">
+                <div class="banner-content d-flex flex-column">
+                    <div class="banner-dot1">
+                        <img src="./image/dots.svg" alt="">
+                    </div>
+                    <div class="banner-dot2">
+                        <img src="./image/dots.svg" alt="">
+                    </div>
+                    <div class="banner-search-box mx-auto d-md-flex ">
+                        <div class="searchbox-bg" id="space-details">
+                            <!--placeholder for space-details-->
+                        </div>
+                    </div>
                 </div>
-                <div class="banner-dot2">
-                    <img src="./image/dots.svg" alt="">
+
+            </div>
+        </section>
+        <section class="stripe">
+            <div class="container">
+                <div class="card location my-5">
+                    <div class="section--title">
+                        地點
+                    </div>
+                    <hr>
+                    <div class="desc">
+                        <ul id="nbf">
+                            <!--nbf placeholder-->
+                        </ul>
+                    </div>
+                    <div class="google-map">
+                        <img src="./image/space/map.jpg" alt="">
+                    </div>
                 </div>
-                <div class="banner-search-box mx-auto d-md-flex ">
-                    <div class="searchbox-bg" id="space-details">
-                        <!--placeholder for space-details-->
+                <div class="card gallery my-5">
+                    <div class="section--title">照片</div>
+                    <hr>
+                    <div class="row" id="photos-placeholder">
+                        <!--photos placeholder-->
+                    </div>
+                </div>
+
+                <div class="card facilities my-5">
+                    <div class="section--title">公共設施</div>
+                    <hr>
+                    <div class="row" id="facilities-placeholder">
+                        <!--facilities placeholders-->
+                    </div>
+                </div>
+                <div class="row pricing-table" id="rooms-placeholder">
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-3 col-sm-1 col-lg-1 footer-logo">
+                            <img src="./image/logo_hexagon.svg">
+                        </div>
+                        <div class="col-9 col-sm-6 col-lg-4 footer-info">
+                            <div class="single-info">
+                                <img src="./image/footer_icon_place.svg" alt="">
+                                <p>台北市快樂區肥宅路362巷38號</p>
+                            </div>
+                            <div class="single-info">
+                                <img src="./image/footer_icon_mail.svg" alt="">
+                                <p>happycolaandcat@gmail.com</p>
+                            </div>
+                            <div class="single-info">
+                                <img src="./image/footer_icon_phone.svg" alt="">
+                                <p>+886 2 1234 5678 </p>
+                            </div>
+                        </div>
+                        <div class="col-0 col-sm-2 col-lg-5"></div>
+                        <div class="col-12 col-sm-3 col-lg-2 footer-link">
+                            <a href="#"><img src="./image/footer_icon_facebook.svg" alt=""></a>
+                            <a href="#"><img src="./image/footer_icon_instagram.svg" alt=""></a>
+                            <a href="#"><img src="./image/footer_icon_youtube.svg" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <p>© 2020 TeamNTUT_WebDesign. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
-        </div>
-    </section>
-    <section class="stripe">
-        <div class="container">
-            <div class="card location my-5">
-                <div class="section--title">
-                    地點
-                </div>
-                <hr>
-                <div class="desc">
-                    <ul id="nbf">
-                        <!--nbf placeholder-->
-                    </ul>
-                </div>
-                <div class="google-map">
-                    <img src="./image/space/map.jpg" alt="">
-                </div>
-            </div>
-            <div class="card gallery my-5">
-                <div class="section--title">照片</div>
-                <hr>
-                <div class="row" id="photos-placeholder">
-                    <!--photos placeholder-->
-                </div>
-            </div>
-            <div class="card facilities my-5">
-                <div class="section--title">公共設施</div>
-                <hr>
-                <div class="row" id="facilities-placeholder">
-                    <!--facilities placeholders-->
-                </div>
-            </div>
-            <div class="row pricing-table" id="rooms-placeholder">
-                <div class="col-12 col-sm card room">
-                    <div class="room--type">雙人房</div>
-                    <div class="room--rent">NT <span class="bigNum">8500</span></div>
-                    <div class="room--gender">限女性</div>
-                    <div class="room--availability">
-                        <div class="status">
-                            <img src="./image/room/space-empty.png" alt="">
-                            <img src="./image/room/space-full.png" alt="">
-                        </div>
-                    </div>
-                    <div class="room--size">7坪</div>
-                    <div class="room--content">單人床</div>
-                    <div class="room--content">附桌椅、可鎖櫥櫃</div>
-                    <div class="room--content">房内有衛浴</div>
-                    <div class="room--book"><button class="btn">預約看房</button></div>
-                </div>
-                <div class="col-12 col-sm card room">
-                    <div class="room--type">4人房</div>
-                    <div class="room--rent">NT <span class="bigNum">7000</span></div>
-                    <div class="room--gender">限男性</div>
-                    <div class="room--availability">
-
-                        <div class="status">
-                            <img src="./image/room/space-empty.png" alt="">
-                            <img src="./image/room/space-full.png" alt="">
-                            <img src="./image/room/space-full.png" alt="">
-                            <img src="./image/room/space-full.png" alt="">
-                        </div>
-                    </div>
-                    <div class="room--size">8坪</div>
-                    <div class="room--content">上下鋪</div>
-                    <div class="room--content">附桌椅、可鎖櫥櫃</div>
-                    <div class="room--content">房内有衛浴</div>
-                    <div class="room--book"><button class="btn">預約看房</button></div>
-                </div>
-                <div class="col-12 col-sm card room">
-                    <div class="room--type">4人房</div>
-                    <div class="room--rent">NT <span class="bigNum">7000</span></div>
-                    <div class="room--gender">限女性</div>
-                    <div class="room--availability">
-                        <div class="status">
-                            <img src="./image/room/space-full.png" alt="">
-                            <img src="./image/room/space-full.png" alt="">
-                            <img src="./image/room/space-full.png" alt="">
-                            <img src="./image/room/space-full.png" alt="">
-                        </div>
-                    </div>
-                    <div class="room--size">8坪</div>
-                    <div class="room--content">上下鋪</div>
-                    <div class="room--content">附桌椅、可鎖櫥櫃</div>
-                    <div class="room--content">公共衛浴</div>
-                    <div class="room--book"><button class="btn">預約看房</button></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="row">
-                    <div class="col-3 col-sm-1 col-lg-1 footer-logo">
-                        <img src="./image/logo_hexagon.svg">
-                    </div>
-                    <div class="col-9 col-sm-6 col-lg-4 footer-info">
-                        <div class="single-info">
-                            <img src="./image/footer_icon_place.svg" alt="">
-                            <p>台北市快樂區肥宅路362巷38號</p>
-                        </div>
-                        <div class="single-info">
-                            <img src="./image/footer_icon_mail.svg" alt="">
-                            <p>happycolaandcat@gmail.com</p>
-                        </div>
-                        <div class="single-info">
-                            <img src="./image/footer_icon_phone.svg" alt="">
-                            <p>+886 2 1234 5678 </p>
-                        </div>
-                    </div>
-                    <div class="col-0 col-sm-2 col-lg-5"></div>
-                    <div class="col-12 col-sm-3 col-lg-2 footer-link">
-                        <a href="#"><img src="./image/footer_icon_facebook.svg" alt=""></a>
-                        <a href="#"><img src="./image/footer_icon_instagram.svg" alt=""></a>
-                        <a href="#"><img src="./image/footer_icon_youtube.svg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2020 TeamNTUT_WebDesign. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+        <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
 
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBzaZPc-wbr2sXVOsX2T6FnDCdR50rniu0",
-            authDomain: "banju-2020.firebaseapp.com",
-            databaseURL: "https://banju-2020.firebaseio.com",
-            projectId: "banju-2020",
-            storageBucket: "banju-2020.appspot.com",
-            messagingSenderId: "374712867478",
-            appId: "1:374712867478:web:7ba7e277200936a9d380b7",
-            measurementId: "G-MJ2H1N31B5"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        let db = firebase.firestore();
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const id = urlParams.get('id')
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBzaZPc-wbr2sXVOsX2T6FnDCdR50rniu0",
+                authDomain: "banju-2020.firebaseapp.com",
+                databaseURL: "https://banju-2020.firebaseio.com",
+                projectId: "banju-2020",
+                storageBucket: "banju-2020.appspot.com",
+                messagingSenderId: "374712867478",
+                appId: "1:374712867478:web:7ba7e277200936a9d380b7",
+                measurementId: "G-MJ2H1N31B5"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            let db = firebase.firestore();
 
-        let spacesRef = db.collection("Spaces").doc(id);
+            /* get url param */
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const id = urlParams.get('id')
 
-        spacesRef.get().then(function (space) {
+            let spacesRef = db.collection("Spaces").doc(id);
 
-            let id = space.id;
-            let area = space.data().area;
-            let city = space.data().city;
-            let district = space.data().district;
-            let name = space.data().name;
-            let priceRange = space.data().price_range;
-            let imageIndex = space.data().image_index;
-            let roomPattern = space.data().room_pattern;
-            let rooms = space.data().rooms;
-            let bed_empty = 0;
+            spacesRef.get().then(function (space) {
 
-            rooms.forEach(function (room) {
-                empty = room.empty | 0;
-                bed_empty += empty;
-            })
-            let nbfs = space.data().nearby_features;
-            let photos = space.data().photos;
-            let facilities = space.data().facilities;
+                let id = space.id;
+                let area = space.data().area;
+                let city = space.data().city;
+                let district = space.data().district;
+                let name = space.data().name;
+                let priceRange = space.data().price_range;
+                let imageIndex = space.data().image_index;
+                let roomPattern = space.data().room_pattern;
+                let rooms = space.data().rooms;
+                let bed_empty = 0;
 
+                rooms.forEach(function (room) {
+                    empty = room.r_emptyBedCount | 0;
+                    bed_empty += empty;
+                })
+                let nbfs = space.data().nearby_features;
+                let photos = space.data().photos;
+                let facilities = space.data().facilities;
 
-            $("#space-details").append(`
+                $("#banner").css("background", `url(../image/search/room-image${imageIndex}.jpg)`);
+                $("#banner").css("background-size", "cover");
+
+                $("#space-details").append(`
                         <div class="banner--location">
                             ${city} ${district} 
                         </div>
@@ -252,62 +204,67 @@
                             ${roomPattern}
                         </div>
                         <div class="banner--desc">
-                            ${area}坪
+                            ${area} 坪
                         </div>
                         <div class="banner--desc">
-                            剩下<span class="bigNum">${bed_empty}</span>床位
+                            剩下 <span class="bigNum">${bed_empty}</span> 床位
 
                         </div>`);
-            nbfs.forEach(function (nbf) {
-                $("#nbf").append(`<li>${nbf}</li>`);
-            })
-            photos.forEach(function (photo) {
-                $("#photos-placeholder").append(`
-                    <div class="photo">
-                        <img src="./image/search/room-image${photo}.jpg" alt="">
-                    </div>`);
-            })
 
-            facilities.forEach(function (f) {
-                $("#facilities-placeholder").append(`
+                nbfs.forEach(function (nbf) {
+                    $("#nbf").append(`<li>${nbf}</li>`);
+                })
+
+                photos.forEach(function (photo) {
+                    $("#photos-placeholder").append(`
+                    <div class="photo">
+                        <img src="./image/search/room-image${photo.image}.jpg" alt="">
+                    </div>`);
+                })
+
+                facilities.forEach(function (f) {
+                    $("#facilities-placeholder").append(`
                     <div class="facility">${f}</div>
                     `);
-            })
-            rooms.forEach(function (r) {
-                eb = r.r_emptyBedCount;
-                fb = r.r_bedCount - eb;
-                $("#rooms-placeholder").append(`
-                <div class="col-12 col-sm card room">
-                    <div class="room--type">${r.r_name}</div>
-                    <div class="room--rent">NT <span class="bigNum">${r.r_rent}</span></div>
-                    <div class="room--gender">${r.r_gender}</div>
-                    <div class="room--availability">
-                        <div class="status">
-                            
+                })
+                rooms.forEach(function (r) {
+                    eb = r.r_emptyBedCount;
+                    fb = r.r_bedCount - eb;
+                    var status = "";
+                    for (i = 0; i < eb; i++) {
+                        status += `
+                            <img src="./image/room/space-empty.png" alt="">
+                            `
+                    }
+                    for (i = 0; i < fb; i++) {
+                        status += `
+                            <img src="./image/room/space-full.png" alt="">
+                            `
+                    }
+                    $("#rooms-placeholder").append(`
+                <div class="col-12 col-sm room">
+                    <div class="card">
+                        <div class="room--type">${r.r_name}</div>
+                        <div class="room--rent">NT <span class="bigNum">${r.r_rent}</span></div>
+                        <div class="room--gender">${r.r_gender}</div>
+                        <div class="room--availability">
+                            <div class="status">
+                                床位：${status}
+                            </div>
                         </div>
+                        <div class="room--size">${r.r_area}坪</div>
+                        <div class="room--content">${r.r_bedType}</div>
+                        <div class="room--content">${r.r_facilities}</div>
+                        <div class="room--content">${r.r_bathroom}</div>
+                        <div class="room--book"><button onclick="location.href='booking.html?id=${id}';" class="btn">預約看房</button></div>
                     </div>
-                    <div class="room--size">${r.r_area}坪</div>
-                    <div class="room--content">${r.r_bedType}</div>
-                    <div class="room--content">${r.r_facilities}</div>
-                    <div class="room--content">${r.r_bathroom}</div>
-                    <div class="room--book"><button class="btn">預約看房</button></div>
                 </div>
                 `);
-                for (i = 0; i < eb; i++) {
-                    $(".status").append(`
-                            <img src="./image/room/space-empty.png" alt="">
-                            `);
-                }
-                for (i = 0; i < fb; i++) {
-                    $(".status").append(`
-                    <img src="./image/room/space-full.png" alt="">
-                            `);
-                }
+
+                })
 
             })
-
-        })
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>

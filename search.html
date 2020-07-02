@@ -1,330 +1,332 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>伴居</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>伴居</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
-    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href='css/general.css'>
-    <link rel="stylesheet" href='css/search.css'>
-</head>
+        <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href='css/general.css'>
+        <link rel="stylesheet" href='css/search.css'>
+    </head>
 
-<body>
-    <nav id="header" class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="./index.html"><img src="image/logo_navbar.svg"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="left"></div>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">關於伴居</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./search.html">搜尋空間</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./about_us.html">聯絡我們</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./qa.html">常見問題</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <section id="banner">
-        <div class="header">
+    <body>
+        <nav id="header" class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="./index.html"><img src="image/logo_navbar.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="left"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">關於伴居</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./search.html">搜尋空間</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about_us.html">聯絡我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./qa.html">常見問題</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="banner">
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header-logo">
+                                <img src="./image/logo_hexagon.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-2 col-12"></div>
+                        <div class="col-lg-1 col-md-2 col-12">
+                            <div class="header-link">
+                                <a href="./index.html">關於伴居</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-12">
+                            <div class="header-link">
+                                <a href="#">搜尋空間</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-12">
+                            <div class="header-link">
+                                <a href="./about_us.html">聯絡我們</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-12">
+                            <div class="header-link">
+                                <a href="./qa.html">常見問題</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-2 col-12"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="banner-content d-flex flex-column">
+                    <div class="banner-title mx-3 mx-md-auto">
+                        <h1>立即尋找你喜歡的公寓吧！</h1>
+                    </div>
+                    <div class="banner-dot1">
+                        <img src="./image/dots.svg" alt="">
+                    </div>
+                    <div class="banner-dot2">
+                        <img src="./image/dots.svg" alt="">
+                    </div>
+                    <div class="banner-search-box mx-md-auto d-md-flex ">
+                        <div class="searchbox-bg">
+                            <form action="">
+                                <div class="d-flex flex-column flex-md-row">
+                                    <div class="flex-fill col-filter_group border-right">
+                                        <div class="form-group">
+                                            <label for="city">縣市：</label>
+                                            <select class="form-control" name="city" id="city">
+                                                <option value="none" selected hidden>選擇縣市</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="district">區域：</label>
+                                            <select class="form-control" name="district" id="district">
+                                                <option value="none" selected hidden>選擇區域</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex-fill col-filter_group border-right">
+                                        <div class="form-group">
+                                            <label for="sex">性別：</label>
+                                            <select class="form-control" name="sex" id="sex">
+                                                <option value="none" selected hidden>選擇性別</option>
+                                                <option>男</option>
+                                                <option>女</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="available-date">入住日期：</label>
+                                            <input class="form-control" name="" type="date" value="available-date"
+                                                id="available-date">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex-fill col-filter_group">
+                                        <div class="form-group">
+                                            <label for="price">價格區間：</label>
+                                            <select class="form-control" name="price" id="price">
+                                                <option value="none" selected hidden>價格區間</option>
+                                                <option>5,000~10,000</option>
+                                                <option>10,000~20,000</option>
+                                                <option>20,000~30,000</option>
+                                                <option>30,000~40,000</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="room">房型：</label>
+                                            <select class="form-control" name="room" id="room">
+                                                <option value="none" selected hidden>選擇房型</option>
+                                                <option>獨立房間</option>
+                                                <option>共享房間</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <button class="d-block button-continue">
+
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="result">
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <div class="header-logo">
+                    <div class="col-md-3 aside">
+                        <div>
+                            <div class="aside-section filter">
+                                <div class="title"><img src="./image/search/ic_filter.png" alt="">
+                                    條件篩選</div>
+
+                                <form action="">
+                                    <div class="d-flex flex-column">
+                                        <div class="flex-fill col-filter_group">
+                                            <div class="form-group">
+                                                <label for="city">縣市：</label>
+                                                <select class="form-control" name="city" id="city">
+                                                    <option value="none" selected hidden>選擇縣市</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="district">區域：</label>
+                                                <select class="form-control" name="district" id="district">
+                                                    <option value="none" selected hidden>選擇區域</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="flex-fill col-filter_group">
+                                            <div class="form-group">
+                                                <label for="sex">性別：</label>
+                                                <select class="form-control" name="sex" id="sex">
+                                                    <option value="none" selected hidden>選擇性別</option>
+                                                    <option>男</option>
+                                                    <option>女</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="available-date">入住日期：</label>
+                                                <input class="form-control" name="" type="date" value="available-date"
+                                                    id="available-date">
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="flex-fill col-filter_group">
+                                            <div class="form-group">
+                                                <label for="price">價格區間：</label>
+                                                <select class="form-control" name="price" id="price">
+                                                    <option value="none" selected hidden>價格區間</option>
+                                                    <option>5,000~10,000</option>
+                                                    <option>10,000~20,000</option>
+                                                    <option>20,000~30,000</option>
+                                                    <option>30,000~40,000</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="room">房型：</label>
+                                                <select class="form-control" name="room" id="room">
+                                                    <option>獨立房間</option>
+                                                    <option>共享房間</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="aside-section sort">
+                                <div class="title"><img src="./image/search/ic_sort.png" alt="">
+                                    排序</div>
+                                <div class="form-group">
+                                    <select class="form-control" name="sorting" id="sorting">
+                                        <option value="none" selected hidden>選擇排序</option>
+                                        <option>價格</option>
+                                        <option>入住日期</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-0 col-md-9 row flex-wrap" id="results-parent">
+                        <!---placeholder for results-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-3 col-sm-1 col-lg-1 footer-logo">
                             <img src="./image/logo_hexagon.svg">
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-2 col-12"></div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="./index.html">關於伴居</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="#">搜尋空間</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="./about_us.html">聯絡我們</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-12">
-                        <div class="header-link">
-                            <a href="./qa.html">常見問題</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-2 col-12"></div>
-                </div>
-            </div>
-        </div>
-        <div class="banner">
-            <div class="banner-content d-flex flex-column">
-                <div class="banner-title mx-3 mx-md-auto">
-                    <h1>立即尋找你喜歡的公寓吧！</h1>
-                </div>
-                <div class="banner-dot1">
-                    <img src="./image/dots.svg" alt="">
-                </div>
-                <div class="banner-dot2">
-                    <img src="./image/dots.svg" alt="">
-                </div>
-                <div class="banner-search-box mx-auto d-md-flex ">
-                    <div class="searchbox-bg">
-                        <form action="">
-                            <div class="d-flex flex-column flex-md-row">
-                                <div class="flex-fill col-filter_group border-right">
-                                    <div class="form-group">
-                                        <label for="city">縣市：</label>
-                                        <select class="form-control" name="city" id="city">
-                                            <option value="none" selected hidden>選擇縣市</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="district">區域：</label>
-                                        <select class="form-control" name="district" id="district">
-                                            <option value="none" selected hidden>選擇區域</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="flex-fill col-filter_group border-right">
-                                    <div class="form-group">
-                                        <label for="sex">性別：</label>
-                                        <select class="form-control" name="sex" id="sex">
-                                            <option value="none" selected hidden>選擇性別</option>
-                                            <option>男</option>
-                                            <option>女</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="available-date">入住日期：</label>
-                                        <input class="form-control" name="" type="date" value="available-date"
-                                            id="available-date">
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="flex-fill col-filter_group">
-                                    <div class="form-group">
-                                        <label for="price">價格區間：</label>
-                                        <select class="form-control" name="price" id="price">
-                                            <option value="none" selected hidden>價格區間</option>
-                                            <option>5,000~10,000</option>
-                                            <option>10,000~20,000</option>
-                                            <option>20,000~30,000</option>
-                                            <option>30,000~40,000</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="room">房型：</label>
-                                        <select class="form-control" name="room" id="room">
-                                            <option value="none" selected hidden>選擇房型</option>
-                                            <option>獨立房間</option>
-                                            <option>共享房間</option>
-                                        </select>
-                                    </div>
-                                </div>
+                        <div class="col-9 col-sm-6 col-lg-4 footer-info">
+                            <div class="single-info">
+                                <img src="./image/footer_icon_place.svg" alt="">
+                                <p>台北市快樂區肥宅路362巷38號</p>
                             </div>
-                        </form>
-                    </div>
-                    <button class="d-block button-continue">
-
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="result">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 aside">
-                    <div class="aside-section filter">
-                        <div class="title"><img src="./image/search/ic_filter.png" alt="">
-                            條件篩選</div>
-
-                        <form action="">
-                            <div class="d-flex flex-column">
-                                <div class="flex-fill col-filter_group">
-                                    <div class="form-group">
-                                        <label for="city">縣市：</label>
-                                        <select class="form-control" name="city" id="city">
-                                            <option value="none" selected hidden>選擇縣市</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="district">區域：</label>
-                                        <select class="form-control" name="district" id="district">
-                                            <option value="none" selected hidden>選擇區域</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="flex-fill col-filter_group">
-                                    <div class="form-group">
-                                        <label for="sex">性別：</label>
-                                        <select class="form-control" name="sex" id="sex">
-                                            <option value="none" selected hidden>選擇性別</option>
-                                            <option>男</option>
-                                            <option>女</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="available-date">入住日期：</label>
-                                        <input class="form-control" name="" type="date" value="available-date"
-                                            id="available-date">
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="flex-fill col-filter_group">
-                                    <div class="form-group">
-                                        <label for="price">價格區間：</label>
-                                        <select class="form-control" name="price" id="price">
-                                            <option value="none" selected hidden>價格區間</option>
-                                            <option>5,000~10,000</option>
-                                            <option>10,000~20,000</option>
-                                            <option>20,000~30,000</option>
-                                            <option>30,000~40,000</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="room">房型：</label>
-                                        <select class="form-control" name="room" id="room">
-                                            <option>獨立房間</option>
-                                            <option>共享房間</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <div class="single-info">
+                                <img src="./image/footer_icon_mail.svg" alt="">
+                                <p>happycolaandcat@gmail.com</p>
                             </div>
-                        </form>
-                    </div>
-                    <div class="aside-section sort">
-                        <div class="title"><img src="./image/search/ic_sort.png" alt="">
-                            排序</div>
-                        <div class="form-group">
-                            <select class="form-control" name="sorting" id="sorting">
-                                <option value="none" selected hidden>選擇排序</option>
-                                <option>價格</option>
-                                <option>入住日期</option>
-                            </select>
+                            <div class="single-info">
+                                <img src="./image/footer_icon_phone.svg" alt="">
+                                <p>+886 2 1234 5678 </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="pr-0 col-md-9 row flex-wrap" id="results-parent">
-                    <!---placeholder for results-->
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="row">
-                    <div class="col-3 col-sm-1 col-lg-1 footer-logo">
-                        <img src="./image/logo_hexagon.svg">
-                    </div>
-                    <div class="col-9 col-sm-6 col-lg-4 footer-info">
-                        <div class="single-info">
-                            <img src="./image/footer_icon_place.svg" alt="">
-                            <p>台北市快樂區肥宅路362巷38號</p>
+                        <div class="col-0 col-sm-2 col-lg-5"></div>
+                        <div class="col-12 col-sm-3 col-lg-2 footer-link">
+                            <a href="#"><img src="./image/footer_icon_facebook.svg" alt=""></a>
+                            <a href="#"><img src="./image/footer_icon_instagram.svg" alt=""></a>
+                            <a href="#"><img src="./image/footer_icon_youtube.svg" alt=""></a>
                         </div>
-                        <div class="single-info">
-                            <img src="./image/footer_icon_mail.svg" alt="">
-                            <p>happycolaandcat@gmail.com</p>
-                        </div>
-                        <div class="single-info">
-                            <img src="./image/footer_icon_phone.svg" alt="">
-                            <p>+886 2 1234 5678 </p>
-                        </div>
-                    </div>
-                    <div class="col-0 col-sm-2 col-lg-5"></div>
-                    <div class="col-12 col-sm-3 col-lg-2 footer-link">
-                        <a href="#"><img src="./image/footer_icon_facebook.svg" alt=""></a>
-                        <a href="#"><img src="./image/footer_icon_instagram.svg" alt=""></a>
-                        <a href="#"><img src="./image/footer_icon_youtube.svg" alt=""></a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2020 TeamNTUT_WebDesign. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <script src="js/navbar_effect.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+            <div class="footer-bottom">
+                <p>© 2020 TeamNTUT_WebDesign. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="js/navbar_effect.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+        <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
 
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBzaZPc-wbr2sXVOsX2T6FnDCdR50rniu0",
-            authDomain: "banju-2020.firebaseapp.com",
-            databaseURL: "https://banju-2020.firebaseio.com",
-            projectId: "banju-2020",
-            storageBucket: "banju-2020.appspot.com",
-            messagingSenderId: "374712867478",
-            appId: "1:374712867478:web:7ba7e277200936a9d380b7",
-            measurementId: "G-MJ2H1N31B5"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        let db = firebase.firestore();
-        let spacesRef = db.collection("Spaces");
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBzaZPc-wbr2sXVOsX2T6FnDCdR50rniu0",
+                authDomain: "banju-2020.firebaseapp.com",
+                databaseURL: "https://banju-2020.firebaseio.com",
+                projectId: "banju-2020",
+                storageBucket: "banju-2020.appspot.com",
+                messagingSenderId: "374712867478",
+                appId: "1:374712867478:web:7ba7e277200936a9d380b7",
+                measurementId: "G-MJ2H1N31B5"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            let db = firebase.firestore();
+            let spacesRef = db.collection("Spaces");
 
-        var cities = [];
-        var districts = [];
-        var gender = ["男", "女"];
+            var cities = [];
+            var districts = [];
+            var gender = ["男", "女"];
 
-        spacesRef.get().then(function (querySnapshot) {
-            querySnapshot.forEach(function (space) {
-                let id = space.id;
-                let area = space.data().area;
-                let city = space.data().city;
-                let district = space.data().district;
-                let name = space.data().name;
-                let priceRange = space.data().price_range;
-                let imageIndex = space.data().image_index;
+            spacesRef.get().then(function (querySnapshot) {
+                querySnapshot.forEach(function (space) {
+                    let id = space.id;
+                    let area = space.data().area;
+                    let city = space.data().city;
+                    let district = space.data().district;
+                    let name = space.data().name;
+                    let priceRange = space.data().price_range;
+                    let imageIndex = space.data().image_index;
 
-                if (!cities.includes(city))
-                    cities.push(city);
+                    if (!cities.includes(city))
+                        cities.push(city);
 
-                if (!districts.includes(district))
-                    districts.push(district);
+                    if (!districts.includes(district))
+                        districts.push(district);
 
-                let cardItem = `
+                    let cardItem = `
                     <div class="pr-0 col-lg-4 col-md-6">
-                        <a href="/room.html?id=${id}">
+                        <a class="no_deco" href="./room.html?id=${id}">
                             <div class="result-card">
                                 <img src="./image/search/room-image${imageIndex}.jpg" alt="">
                                 <div class="available">立即入住</div>
@@ -341,16 +343,16 @@
                             </div>
                         </a>
                     </div>`;
-                $('#results-parent').append(cardItem);
+                    $('#results-parent').append(cardItem);
+                });
+                cities.forEach(function (city) {
+                    $("#city").append(`<option>${city}</option>`);
+                });
+                districts.forEach(function (district) {
+                    $("#district").append(`<option>${district}</option>`);
+                });
             });
-            cities.forEach(function (city) {
-                $("#city").append(`<option>${city}</option>`);
-            });
-            districts.forEach(function (district) {
-                $("#district").append(`<option>${district}</option>`);
-            });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>

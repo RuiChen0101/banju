@@ -87,57 +87,9 @@
         </section>
         <section class="result">
             <div class="container">
-                <div class="card booking-form">
-                    <div class="container py-5 px-md-5">
-                        <h1 class="form-title">預約看房</h1>
-                        <hr class="mb-5">
-                        <form>
-                            <div class="form-row">
-                                <div class="col-md-8 form-group">
-                                    <input type="text" class="form-control" placeholder="您的姓名">
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <select class="form-control" id="exampleFormControlSelect1" placeholder="">
-                                        <option selected>您的性別</option>
-                                        <option>男</option>
-                                        <option>女</option>
-                                        <option>其他</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-md-8 form-group">
-                                    <input type="email" class="form-control" aria-describedby="emailHelp"
-                                        placeholder="E-mail">
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <input type="number" class="form-control" placeholder="聯絡號碼">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-md-8 form-group">
-                                    <input id="selectedRoom" value="" type="text" class="form-control"
-                                        placeholder="預約房屋">
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <input type="date" name="" id="" class="form-control" placeholder="日期">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
-                                    placeholder="備注..."></textarea>
-                            </div>
-                            <div class="form-row">
-                                <button type="submit" class="btn btn-primary button-submit">
-                                    <p style="width:100%">預約</p>
-                            </div>
-                            </button>
-                        </form>
-                    </div>
-
-                    <!--contact-form-->
-                </div>
+                <h1>資料庫即將重置，確認？</h1>
+                <button onclick="rebuild();">確認</button>
+            </div>
             </div>
         </section>
         <footer id="footer">
@@ -189,37 +141,120 @@
         <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
         <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyBzaZPc-wbr2sXVOsX2T6FnDCdR50rniu0",
-                authDomain: "banju-2020.firebaseapp.com",
-                databaseURL: "https://banju-2020.firebaseio.com",
-                projectId: "banju-2020",
-                storageBucket: "banju-2020.appspot.com",
-                messagingSenderId: "374712867478",
-                appId: "1:374712867478:web:7ba7e277200936a9d380b7",
-                measurementId: "G-MJ2H1N31B5"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-            let db = firebase.firestore();
+            function rebuild() {
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                    apiKey: "AIzaSyBzaZPc-wbr2sXVOsX2T6FnDCdR50rniu0",
+                    authDomain: "banju-2020.firebaseapp.com",
+                    databaseURL: "https://banju-2020.firebaseio.com",
+                    projectId: "banju-2020",
+                    storageBucket: "banju-2020.appspot.com",
+                    messagingSenderId: "374712867478",
+                    appId: "1:374712867478:web:7ba7e277200936a9d380b7",
+                    measurementId: "G-MJ2H1N31B5"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+                let db = firebase.firestore();
+                let spacesRef = db.collection("Spaces");
+                for (i = 1; i < 15; i++) {
+                    if (i < 10) {
 
-            /* get url param */
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const id = urlParams.get('id');
+                        id = "000" + i;
+                        ii = "0" + i;
+                    } else {
 
-            let spacesRef = db.collection("Spaces").doc(id);
-
-            spacesRef.get().then(function (space) {
-                console.log(space.id + " " + space.data().name);
-                $("#selectedRoom").attr("placeholder", space.id + " " + space.data().city + " " + space.data()
-                    .district + " " + space.data().name);
-                $("#selectedRoom").attr("value", space.id + " " + space.data().city + " " + space.data()
-                    .district + " " + space.data().name);
-
-            });
+                        id = "00" + i;
+                        ii = "" + i;
+                    }
+                    spacesRef.doc(id).set({
+                        name: "舒適套房",
+                        city: "台北市",
+                        district: "大安區",
+                        area: 50,
+                        room_pattern: "3房 1廳 2衛",
+                        price_range: "5000~10000",
+                        image_index: ii,
+                        nearby_features: [
+                            "距離忠孝新生站 2 分鐘",
+                            "靠近光華商場",
+                            "距離北科大 8 分鐘路程"
+                        ],
+                        photos: [{
+                            image: "01",
+                            title: "單人房A",
+                        }, {
+                            image: "02",
+                            title: "雙人房BB",
+                        }, {
+                            image: "03",
+                            title: "四人房CC",
+                        }, {
+                            image: "04",
+                            title: "客廳",
+                        }, {
+                            image: "05",
+                            title: "飯廳",
+                        }, {
+                            image: "06",
+                            title: "走廊",
+                        }],
+                        facilities: [
+                            "冷氣",
+                            "網絡",
+                            "除濕機",
+                            "洗衣機",
+                            "烘衣機",
+                            "飲水機",
+                            "電視機",
+                            "沙發",
+                            "茶几",
+                            "餐桌椅",
+                            "微波爐",
+                            "冰箱",
+                            "電磁爐",
+                            "厨具"
+                        ],
+                        rooms: [{
+                                r_name: "單人房A",
+                                r_rent: "10000",
+                                r_gender: "女",
+                                r_bedCount: 1,
+                                r_emptyBedCount: 1,
+                                r_area: 5,
+                                r_bedType: "單人床",
+                                r_bathroom: "獨立衛浴",
+                                r_facilities: "附桌椅、可鎖櫥櫃"
+                            },
+                            {
+                                r_name: "雙人房B",
+                                r_rent: "8500",
+                                r_gender: "女",
+                                r_bedCount: 2,
+                                r_emptyBedCount: 0,
+                                r_area: 7,
+                                r_bedType: "單人床",
+                                r_bathroom: "共用衛浴",
+                                r_facilities: "附桌椅、可鎖櫥櫃"
+                            },
+                            {
+                                r_name: "四人房CC",
+                                r_rent: "7000",
+                                r_gender: "女",
+                                r_bedCount: 4,
+                                r_emptyBedCount: 3,
+                                r_area: 8,
+                                r_bedType: "上下舖",
+                                r_bathroom: "共用衛浴",
+                                r_facilities: "附桌椅、可鎖櫥櫃"
+                            }
+                        ]
+                    }).then(function () {
+                        $(".result .container").append(`<h1>DONE</h1>`);
+                    })
+                }
+            }
         </script>
     </body>
 
