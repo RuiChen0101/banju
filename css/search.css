@@ -54,6 +54,10 @@
   .banner-search-box .col-filter_group {
     padding: 0px 25px;
   }
+
+  .aside {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 760px) {
